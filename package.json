@@ -4,8 +4,15 @@
   "description": "OpenCode-style context pruning for the pi coding agent. Selectively clears old tool result content to free up context window space without losing conversation structure.",
   "keywords": ["pi-package"],
   "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc"
+  },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "typescript": "^5.0.0"
   },
   "pi": {
     "extensions": ["./extensions"]

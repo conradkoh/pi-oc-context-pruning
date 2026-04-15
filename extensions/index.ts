@@ -76,7 +76,10 @@ export default function (pi: ExtensionAPI) {
 
         // Estimate tokens from the text portions of the result
         const text = msg.content
-          .filter((c): c is { type: "text"; text: string } => c.type === "text")
+          .filter(
+            (c): c is { type: "text"; text: string } =>
+              c.type === "text" && "text" in c
+          )
           .map((c) => c.text)
           .join("");
 
